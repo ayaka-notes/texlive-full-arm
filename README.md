@@ -31,9 +31,9 @@ Texlive-full@Ayaka-notes support [overleaf-cep](https://github.com/yu-i-i/overle
 
 For example:
 ```
-ALL_TEX_LIVE_DOCKER_IMAGES=ghcr.io/ayaka-notes/texlive-full:2025.1, ghcr.io/ayaka-notes/texlive-full:2024.1
+ALL_TEX_LIVE_DOCKER_IMAGES=ghcr.io/ayaka-notes/texlive-full-arm:2025.1, ghcr.io/ayaka-notes/texlive-full-arm:2024.1
 ALL_TEX_LIVE_DOCKER_IMAGE_NAMES=Texlive 2025, Texlive 2024
-TEX_LIVE_DOCKER_IMAGE=ghcr.io/ayaka-notes/texlive-full:2025.1
+TEX_LIVE_DOCKER_IMAGE=ghcr.io/ayaka-notes/texlive-full-arm:2025.1
 ```
 
 If you need more help, refer to [overleaf-cep documentation](https://github.com/yu-i-i/overleaf-cep/wiki/Extended-CE:-Sandboxed-Compiles)
@@ -42,13 +42,13 @@ If you need more help, refer to [overleaf-cep documentation](https://github.com/
 ## 📦 Available TeXLive Version
 
 Thanks to Github Action, we can build all tex image parallel, which includes:
-- `ghcr.io/ayaka-notes/texlive-full:2025.1` (Also `latest` tag)
-- `ghcr.io/ayaka-notes/texlive-full:2024.1`
-- `ghcr.io/ayaka-notes/texlive-full:2023.1`
-- `ghcr.io/ayaka-notes/texlive-full:2022.1`
-- `ghcr.io/ayaka-notes/texlive-full:2021.1`
-- `ghcr.io/ayaka-notes/texlive-full:2020.1`
-- `ghcr.io/ayaka-notes/texlive-full:base`
+- `ghcr.io/ayaka-notes/texlive-full-arm:2025.1` (Also `latest` tag)
+- `ghcr.io/ayaka-notes/texlive-full-arm:2024.1`
+- `ghcr.io/ayaka-notes/texlive-full-arm:2023.1`
+- `ghcr.io/ayaka-notes/texlive-full-arm:2022.1`
+- `ghcr.io/ayaka-notes/texlive-full-arm:2021.1`
+- `ghcr.io/ayaka-notes/texlive-full-arm:2020.1`
+- `ghcr.io/ayaka-notes/texlive-full-arm:base`
 
 We use mirror archive from [utah university](https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/), which includes almost all texlive image ranging from 1996 to 2024. And thankes to Overleaf's Dockerfile, we can build this project faster.
 
