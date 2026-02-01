@@ -8,7 +8,7 @@ on:
 
 env:
   DOCKER_REGISTRY: ghcr.io
-  IMAGE_NAME: ayaka-notes/texlive-full
+  IMAGE_NAME: ayaka-notes/texlive-full-arm
   IMAGE_TAG: base
 
 jobs:
