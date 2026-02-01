@@ -13,7 +13,7 @@ jobs:
       - name: Delete 'untaged' containers
         uses: snok/container-retention-policy@v2
         with:
-          image-names: texlive-full/*,texlive-full
+          image-names: texlive-full-arm/*,texlive-full-arm
           cut-off: 1 min ago UTC
           account-type: org
           org-name: ayaka-notes
