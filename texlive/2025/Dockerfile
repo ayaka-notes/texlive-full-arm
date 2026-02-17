@@ -21,16 +21,19 @@ LABEL \
 COPY LatexMk /usr/local/share/latexmk/LatexMk
 COPY patchSynctex.R /usr/local/bin/
 COPY run-chktex.sh /usr/local/bin/
+COPY ./latexminted /home/tex/latexminted
 
 # Set file exec mod
 # -----------------------------------
 RUN chmod +x /usr/local/bin/* && chmod +x /usr/local/share/latexmk/*
+RUN chown -R tex:tex /home/tex/latexminted
 
 
 # ARG For TEXLIVE
 # -----------------------------------
 ARG TEXLIVE_Version=2025
 ARG TEXLIVE_MIRROR=https://mirrors.mit.edu/CTAN/systems/texlive/tlnet/
+# ARG TEXLIVE_MIRROR=https://texlive.info/tlnet-archive/${TEXLIVE_Version}/05/13/tlnet
 
 
 # Install texlive like Overleaf

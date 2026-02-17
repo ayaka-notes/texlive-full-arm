@@ -26,6 +26,7 @@ LABEL \
 # Makes sure LuaTex cache is writable
 # -----------------------------------
 ENV TEXMFVAR=/tmp/texmf-var
+RUN mkdir -p /tmp/texmf-var && chmod -R 777 /tmp
 
 # Set ENV to noninteractive
 # -----------------------------------
@@ -33,7 +34,19 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Update to ensure dependencies are updated
 # ------------------------------------------
-ENV REBUILT_AFTER="2024-14-02"
+ENV REBUILT_AFTER="2026-01-13"
+
+
+# Set up tex user and home directory (match upstream)
+# ---------------------------------------------------
+RUN set -eux; \
+    groupadd -g 1000 tex; \
+    useradd -m -u 1000 -g 1000 -d /home/tex -s /bin/sh \
+      -c "You are in a sandboxed container without access to outside resources ^_^" \
+      tex; \
+    passwd -d tex; \
+    chmod 750 /home/tex
+
 
 # Install dependencies
 # --------------------
