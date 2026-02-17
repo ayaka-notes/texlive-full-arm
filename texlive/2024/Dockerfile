@@ -91,4 +91,4 @@ RUN pip3 install --upgrade pip \
 
 # Set PATH ENV
 # -----------------------------------
-ENV PATH="/usr/local/texlive/${TEXLIVE_Version}/bin/x86_64-linux:${PATH}"
+ENV PATH="/usr/local/texlive/${TEXLIVE_Version}/bin/aarch64-linux:${PATH}"
