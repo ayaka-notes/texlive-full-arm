@@ -1,10 +1,10 @@
 # ---------------------------------------------
-# Overleaf TexLive 2024 (ayaka-notes/overleaf)
+# Overleaf TexLive 2026 (ayaka-notes/overleaf)
 # ---------------------------------------------
 
 # Use base image, see texlive/base
 # -----------------------------------
-FROM ghcr.io/ayaka-notes/texlive-full-arm:base
+FROM ghcr.io/ayaka-notes/texlive-full:base
 
 # LABEL
 # -----------------------------------
@@ -31,9 +31,8 @@ RUN chown -R tex:tex /home/tex/latexminted
 
 # ARG For TEXLIVE
 # -----------------------------------
-ARG TEXLIVE_Version=2025
-ARG TEXLIVE_MIRROR=https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/${TEXLIVE_Version}/tlnet-final
-# ARG TEXLIVE_MIRROR=https://mirrors.mit.edu/CTAN/systems/texlive/tlnet/
+ARG TEXLIVE_Version=2026
+ARG TEXLIVE_MIRROR=https://mirrors.mit.edu/CTAN/systems/texlive/tlnet/
 # ARG TEXLIVE_MIRROR=https://texlive.info/tlnet-archive/${TEXLIVE_Version}/05/13/tlnet
 
 
@@ -86,4 +85,4 @@ RUN echo "shell_escape = t" >> /usr/local/texlive/${TEXLIVE_Version}/texmf.cnf &
 
 # Set PATH ENV
 # -----------------------------------
-ENV PATH="/usr/local/texlive/${TEXLIVE_Version}/bin/aarch64-linux:${PATH}"
+ENV PATH="/usr/local/texlive/${TEXLIVE_Version}/bin/x86_64-linux:${PATH}"
